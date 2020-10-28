@@ -1,0 +1,142 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+/* tvoje styly sem */
+
+.hlavni-recept{
+    background-position: center;
+    padding: 0.5rem;
+    flex-grow: 2;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+}
+
+.recept-meta{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.doporucujeme{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.recept-meta{
+        position: relative;
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: space-between;
+        }
+
+        .recept{
+            padding: 0.5rem;
+            min-height: 90px;
+            background-position: center;
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+
+}
+.hlavni-recept{
+    background-image: url('images/burger.jpg');
+}
+
+.recept2{
+    background-image: url('images/sushi.jpg')}
+
+    .recept3{
+        background-image: url('images/rajcata.jpg');
+    }
+    
+    .recept4{
+        background-image: url('images/kure.jpg');
+    }
+    
+    .recept5{
+        background-image: url('images/grilovani.jpg');
+    }
+    
+    .sloupec{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+
+
+
+    /*tableťák*/
+
+@media (min-width: 480px) {
+    .recept-nazev-hlavni {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .hlavni-recept {
+        min-height: 250px;
+        padding: 1.25rem;
+    }
+    .recept {
+        min-height: 150px; 
+        padding: 1.25rem;
+    }
+    .doporucujeme {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hlavni-recept {
+        flex-basis: 100%;
+    }
+    .sloupec {
+        flex: 1;
+    }
+}
